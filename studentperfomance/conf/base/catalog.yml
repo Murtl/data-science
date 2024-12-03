@@ -1,0 +1,109 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+#
+# We support interacting with a variety of data stores including local file systems, cloud, network and HDFS
+#
+# An example data set definition can look as follows:
+#
+#bikes:
+#  type: pandas.CSVDataset
+#  filepath: "data/01_raw/bikes.csv"
+#
+#weather:
+#  type: spark.SparkDataset
+#  filepath: s3a://your_bucket/data/01_raw/weather*
+#  file_format: csv
+#  credentials: dev_s3
+#  load_args:
+#    header: True
+#    inferSchema: True
+#  save_args:
+#    sep: '|'
+#    header: True
+#
+#scooters:
+#  type: pandas.SQLTableDataset
+#  credentials: scooters_credentials
+#  table_name: scooters
+#  load_args:
+#    index_col: ['name']
+#    columns: ['name', 'gear']
+#  save_args:
+#    if_exists: 'replace'
+#    # if_exists: 'fail'
+#    # if_exists: 'append'
+#
+# The Data Catalog supports being able to reference the same file using two different Dataset implementations
+# (transcoding), templating and a way to reuse arguments that are frequently repeated. See more here:
+# https://docs.kedro.org/en/stable/data/data_catalog.html
+
+student_performance_factors:
+ type: pandas.CSVDataset
+ filepath: data/01_raw/student_performance_factors.csv
+
+student_performance_factors_preprocessed:
+ type: pandas.CSVDataset
+ filepath: data/02_preprocessed/student_performance_factors_preprocessed.csv
+
+student_performance_factors_train_data:
+  type: pandas.CSVDataset
+  filepath: data/03_train_data/student_performance_factors_train_data.csv
+
+student_performance_factors_test_data:
+  type: pandas.CSVDataset
+  filepath: data/04_test_data/student_performance_factors_test_data.csv
+
+autogluon_tabular_model:
+  type: pickle.PickleDataset
+  filepath: data/05_models/autogluon_tabular_model.pkl
+
+autogluon_tabular_nn_model:
+  type: pickle.PickleDataset
+  filepath: data/05_models/autogluon_tabular_nn_model.pkl
+
+autogluon_multimodal_model:
+  type: pickle.PickleDataset
+  filepath: data/05_models/autogluon_multimodal_model.pkl
+  
+autogluon_tabular_predictions:
+  type: pandas.CSVDataset
+  filepath: data/06_predictions/autogluon_tabular_predictions.csv
+
+autogluon_tabular_nn_predictions:
+  type: pandas.CSVDataset
+  filepath: data/06_predictions/autogluon_tabular_nn_predictions.csv
+
+autogluon_multimodal_predictions:
+  type: pandas.CSVDataset
+  filepath: data/06_predictions/autogluon_multimodal_predictions.csv
+
+heatmap_with_interpretation:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_reporting/heatmap_with_interpretation.png
+  
+heatmap_encoded_with_interpretation:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_reporting/heatmap_encoded_with_interpretation.png
+  
+attendance_exam_corr_plot_with_interpretation:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_reporting/attendance_exam_corr_plot_with_interpretation.png
+
+hours_studied_exam_corr_plot_with_intepretation:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_reporting/hours_studied_exam_corr_plot_with_intepretation.png
+
+model_accuracies:
+  type: pandas.CSVDataset
+  filepath: data/07_reporting/model_accuracies.csv
+
+accuracy_visualization:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/07_reporting/model_accuracies.png
+
+best_model_visualisation:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_interpretations/best_model_visualisation.png
+    

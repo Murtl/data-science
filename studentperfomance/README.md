@@ -1,7 +1,5 @@
-# data-science
-Repo for my data-science project (Modul: Data Science WiSe24/25)
-
 ## Student Performance Factors
+
 Dataset from Kaggle -> https://www.kaggle.com/datasets/lainguyn123/student-performance-factors
 
 This dataset provides a comprehensive overview of various factors affecting student performance in exams. It includes information on study habits, attendance, parental involvement, and other aspects influencing academic success.
@@ -11,22 +9,14 @@ Which factors influence student performance the most, and how can we predict a s
 
 ### Metholodgy
 
-### Step 1: Data Exploration
-* Investigate and understand the data and its values
+#### Data Exploration with Pandas:
 * Visualize the data (scatter plots, histograms, heatmaps).
 * Investigate the correlation of the values with the exam_grade.
 
-### Step 2: Data Preprocessing
-* Handle missing values
-* 
-* Data Preprocessing: Feature scaling, one-hot encoding of categorical variables.
-
-### Step 3: 
-
-
 #### Building a Prediction Model:
 * Data Preprocessing: Feature scaling, one-hot encoding of categorical variables.
-* Model Training: Use Autogluon to find the best model for predictions.
+* Model Training: Use simple models like a neural network (PyTorch) to predict student performance (grades or classes).
+* Evaluation: Measure accuracy.
 
 #### Interpret the Results:
 * Identify the most important factors influencing performance.

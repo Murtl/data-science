@@ -17,9 +17,7 @@ Which factors influence student performance the most, and how can we predict a s
 * Investigate the correlation of the values with the exam_grade.
 
 ### Step 2: Data Preprocessing
-* Handle missing values
-* 
-* Data Preprocessing: Feature scaling, one-hot encoding of categorical variables.
+
 
 ### Step 3: 
 

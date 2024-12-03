@@ -1,0 +1,6 @@
+label_column: "Exam_Score" 
+heatmap: "data/08_reporting/heatmap.png"
+heatmap_encoded: "data/08_reporting/heatmap_encoded.png"
+attendance_exam_corr_plot: "data/08_reporting/attendance_vs_exam_score.png"
+hours_studied_exam_corr_plot: "data/08_reporting/hours_studied_vs_exam_score.png"
+accuracy_visualization: "data/08_reporting/model_accuracies.png"
