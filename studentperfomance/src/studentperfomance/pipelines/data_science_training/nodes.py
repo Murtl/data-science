@@ -37,7 +37,7 @@ def train_multimodal_model(train_data: pd.DataFrame, label_column: str):
         presets='best_quality',
         time_limit= 4 * 3600,
         hyperparameters={
-            'env.num_gpus': 1,            # GPU verwenden
+            'env.num_gpus': 1,  
         }
     )
     return predictor

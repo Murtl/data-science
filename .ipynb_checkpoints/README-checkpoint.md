@@ -17,7 +17,9 @@ Which factors influence student performance the most, and how can we predict a s
 * Investigate the correlation of the values with the exam_grade.
 
 ### Step 2: Data Preprocessing
-
+* Handle missing values
+* 
+* Data Preprocessing: Feature scaling, one-hot encoding of categorical variables.
 
 ### Step 3: 
 
@@ -29,3 +31,11 @@ Which factors influence student performance the most, and how can we predict a s
 #### Interpret the Results:
 * Identify the most important factors influencing performance.
 * Derive actionable recommendations (e.g., support programs based on the results or other datasets to enhance the model).
+
+
+nicht löschen:
+\ag-20241108_105806
+AutogluonModels\ag-20241122_133744
+AutogluonModels\ag-20241122_143448"
+\ag-20241122_153450"
+ag-20241122_165935

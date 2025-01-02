@@ -1,44 +1,3 @@
-# Here you can define all your data sets by using simple YAML syntax.
-#
-# Documentation for this file format can be found in "The Data Catalog"
-# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
-#
-# We support interacting with a variety of data stores including local file systems, cloud, network and HDFS
-#
-# An example data set definition can look as follows:
-#
-#bikes:
-#  type: pandas.CSVDataset
-#  filepath: "data/01_raw/bikes.csv"
-#
-#weather:
-#  type: spark.SparkDataset
-#  filepath: s3a://your_bucket/data/01_raw/weather*
-#  file_format: csv
-#  credentials: dev_s3
-#  load_args:
-#    header: True
-#    inferSchema: True
-#  save_args:
-#    sep: '|'
-#    header: True
-#
-#scooters:
-#  type: pandas.SQLTableDataset
-#  credentials: scooters_credentials
-#  table_name: scooters
-#  load_args:
-#    index_col: ['name']
-#    columns: ['name', 'gear']
-#  save_args:
-#    if_exists: 'replace'
-#    # if_exists: 'fail'
-#    # if_exists: 'append'
-#
-# The Data Catalog supports being able to reference the same file using two different Dataset implementations
-# (transcoding), templating and a way to reuse arguments that are frequently repeated. See more here:
-# https://docs.kedro.org/en/stable/data/data_catalog.html
-
 student_performance_factors:
  type: pandas.CSVDataset
  filepath: data/01_raw/student_performance_factors.csv
@@ -79,31 +38,41 @@ autogluon_multimodal_predictions:
   type: pandas.CSVDataset
   filepath: data/06_predictions/autogluon_multimodal_predictions.csv
 
-heatmap_with_interpretation:
+heatmap:
   type: matplotlib.MatplotlibWriter
-  filepath: data/07_reporting/heatmap_with_interpretation.png
+  filepath: data/08_reporting/heatmap.png
   
-heatmap_encoded_with_interpretation:
+heatmap_encoded:
   type: matplotlib.MatplotlibWriter
-  filepath: data/07_reporting/heatmap_encoded_with_interpretation.png
+  filepath: data/08_reporting/heatmap_encoded.png
   
-attendance_exam_corr_plot_with_interpretation:
+attendance_exam_corr_plot:
   type: matplotlib.MatplotlibWriter
-  filepath: data/07_reporting/attendance_exam_corr_plot_with_interpretation.png
+  filepath: data/08_reporting/attendance_exam_corr_plot.png
 
-hours_studied_exam_corr_plot_with_intepretation:
+hours_studied_exam_corr_plot:
   type: matplotlib.MatplotlibWriter
-  filepath: data/07_reporting/hours_studied_exam_corr_plot_with_intepretation.png
+  filepath: data/08_reporting/hours_studied_exam_corr_plot.png
 
 model_accuracies:
   type: pandas.CSVDataset
-  filepath: data/07_reporting/model_accuracies.csv
+  filepath: data/07_model_comparison/model_accuracies.csv
 
 accuracy_visualization:
   type: matplotlib.MatplotlibWriter
-  filepath: data/07_reporting/model_accuracies.png
+  filepath: data/07_model_comparison/model_accuracies.png
 
-best_model_visualisation:
+best_model_leaderboard:
+  type: pandas.CSVDataset
+  filepath: data/07_model_comparison/best_model_leaderboard.csv
+
+best_model_feature_importance:
+  type: pandas.CSVDataset
+  filepath: data/07_model_comparison/best_model_feature_importance.csv
+
+best_model_feature_importance_plot:
   type: matplotlib.MatplotlibWriter
-  filepath: data/08_interpretations/best_model_visualisation.png
+  filepath: data/07_model_comparison/best_model_feature_importance_plot.png
+
+
     

@@ -1,10 +1,10 @@
 from kedro.pipeline import Pipeline, node
 from .nodes import (
     preprocess_student_performance_factors,
-    generate_heatmap_with_interpretation,
-    generate_heatmap_encoded_with_interpretation,
-    generate_correlation_plot_attendance_with_interpretation,
-    generate_correlation_plot_hours_studied_with_interpretation,
+    generate_heatmap,
+    generate_heatmap_encoded,
+    generate_correlation_plot_attendance,
+    generate_correlation_plot_hours_studied,
 )
 
 
@@ -18,28 +18,28 @@ def create_pipeline(**kwargs) -> Pipeline:
                 name="preprocess_student_performance_factors_node",
             ),
             node(
-                func=generate_heatmap_with_interpretation,
+                func=generate_heatmap,
                 inputs="student_performance_factors_preprocessed",
-                outputs="heatmap_with_interpretation",  
-                name="generate_heatmap_with_interpretation_node",
+                outputs="heatmap",  
+                name="generate_heatmap_node",
             ),
             node(
-                func=generate_heatmap_encoded_with_interpretation,
+                func=generate_heatmap_encoded,
                 inputs="student_performance_factors_preprocessed",
-                outputs="heatmap_encoded_with_interpretation",  
-                name="generate_heatmap_encoded_with_interpretation_node",
+                outputs="heatmap_encoded",  
+                name="generate_heatmap_encoded_node",
             ),
             node(
-                func=generate_correlation_plot_attendance_with_interpretation,
+                func=generate_correlation_plot_attendance,
                 inputs="student_performance_factors_preprocessed",
-                outputs="attendance_exam_corr_plot_with_interpretation",  
-                name="generate_correlation_plot_attendance_with_interpretation_node",
+                outputs="attendance_exam_corr_plot",  
+                name="generate_correlation_plot_attendance_node",
             ),
             node(
-                func=generate_correlation_plot_hours_studied_with_interpretation,
+                func=generate_correlation_plot_hours_studied,
                 inputs="student_performance_factors_preprocessed",
-                outputs="hours_studied_exam_corr_plot_with_intepretation",
-                name="generate_correlation_plot_hours_studied_with_interpretation_node",
+                outputs="hours_studied_exam_corr_plot",
+                name="generate_correlation_plot_hours_studied_node",
             ),
         ]
     )
