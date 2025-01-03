@@ -12,7 +12,7 @@ Which factors influence student performance the most, and how can we predict a s
 ### Structure
 - `pre-pipeline-research/`: Contains the pre-pipeline research that is not part of the paper but was necessary to understand the data, the problem and AutoGluon
   (for more information take a look into the `student_performance_factors.ipynb` storybook in the folder).
-- `studentperformance/`: Contains the main research of the paper and the whole kedro pipeline.
+- `studentperformance/`: Contains the main research of the paper and the whole kedro pipeline (see `studentperformance/visualization` for the pipeline visualization).
   The methodology described in the next sections refers to the parts of the pipeline.
 - `talk-slides`: Contains the slides for the talk about the project that I gave in the course on 2024/12/12.
 
