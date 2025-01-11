@@ -10,9 +10,9 @@ This dataset provides a comprehensive overview of various factors affecting stud
 Which factors influence student performance the most, and how can we predict a student’s performance based on these factors?
 
 ### Structure
-- `pre-pipeline-research/`: Contains the pre-pipeline research that is not part of the paper but was necessary to understand the data, the problem and AutoGluon
+- `pre-pipeline-research/`: Contains the pre-pipeline research that is not part of the report but was necessary to understand the data, the problem and AutoGluon
   (for more information take a look into the `student_performance_factors.ipynb` storybook in the folder).
-- `studentperformance/`: Contains the main research of the paper and the whole kedro pipeline (see `studentperformance/visualization` for the pipeline visualization).
+- `studentperformance/`: Contains the main research of the report and the whole kedro pipeline (see `studentperformance/visualization` for the pipeline visualization).
   The methodology described in the next sections refers to the parts of the pipeline.
 - `talk-slides`: Contains the slides for the talk about the project that I gave in the course on 2024/12/12.
 
@@ -69,6 +69,6 @@ Which factors influence student performance the most, and how can we predict a s
   - notebook: `notebooks/5_data_science_comparison.ipynb`
 
 ### Step 7: "Baseline" Comparison
-- The next step (that is not part of the pipeline but of the paper) was to compare the best model to other models from other researchers.
+- The next step (that is not part of the pipeline but of the report) was to compare the best model to other models from other researchers.
 - For this, different models from Kaggle on the same dataset were used.
-- This whole analysis and final comparison is present in the paper (`Student_Performance_Paper_Michael_Mertl.pdf`).
+- This whole analysis and final comparison is present in the report (`Student_Performance_Report_Michael_Mertl.pdf`).
