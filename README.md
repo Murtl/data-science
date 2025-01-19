@@ -15,7 +15,7 @@ Which factors influence student performance the most, and how can we predict a s
 - `studentperformance/`: Contains the main research of the report and the whole kedro pipeline (see `studentperformance/visualization` for the pipeline visualization).
   The methodology described in the next sections refers to the parts of the pipeline.
 - `talk-slides`: Contains the slides for the talk about the project that I gave in the course on 2024/12/12.
-- `anaconda-environment.yml`: Contains the environment for the project which can be used to recreate the environment and the research.
+- `anaconda_environment.yml`: Contains the environment for the project which can be used to recreate the environment and the research.
 - `Student_Performance_Report_Michael_Mertl.pdf`: Contains the final report of the project.
 
 ### Methodology
