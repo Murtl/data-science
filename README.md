@@ -15,6 +15,8 @@ Which factors influence student performance the most, and how can we predict a s
 - `studentperformance/`: Contains the main research of the report and the whole kedro pipeline (see `studentperformance/visualization` for the pipeline visualization).
   The methodology described in the next sections refers to the parts of the pipeline.
 - `talk-slides`: Contains the slides for the talk about the project that I gave in the course on 2024/12/12.
+- `anaconda-environment.yml`: Contains the environment for the project which can be used to recreate the environment and the research.
+- `Student_Performance_Report_Michael_Mertl.pdf`: Contains the final report of the project.
 
 ### Methodology
 
@@ -61,7 +63,7 @@ Which factors influence student performance the most, and how can we predict a s
 
 ### Step 6: Model Comparison
 - The accuracy of the predictions of the three models was compared.
-- The result was that the `WeightedEnsemble_L3` model of the TabularPredictor was the best model with an accuracy of 0.8713.
+- The result was that the `WeightedEnsemble_L3` model of the TabularPredictor was the best model with an accuracy of 0.8713 (0.8777 on the test_data).
 - The feature importance of the best model was also analyzed -> `attendance` (0.756) and `hours_studied` (0.734) are the most important features.
 - In the pipeline:
   - plots: `data/07_model_comparison/`
@@ -72,3 +74,5 @@ Which factors influence student performance the most, and how can we predict a s
 - The next step (that is not part of the pipeline but of the report) was to compare the best model to other models from other researchers.
 - For this, different models from Kaggle on the same dataset were used.
 - This whole analysis and final comparison is present in the report (`Student_Performance_Report_Michael_Mertl.pdf`).
+- The extra calculated metric scores, besides the accuracy, are present in the `studentperformance/notebooks/5_data_science_comparison.ipynb` notebook
+and are used to compare my model with the other Kaggle models.
